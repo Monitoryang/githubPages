@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的学习博客 | Learning Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>Learning Hub</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#categories" class="nav-link">分类</a></li>
+                <li><a href="#articles" class="nav-link">文章</a></li>
+                <li><a href="#about" class="nav-link">关于</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 移动端菜单 -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link">首页</a></li>
+            <li><a href="#categories" class="mobile-nav-link">分类</a></li>
+            <li><a href="#articles" class="mobile-nav-link">文章</a></li>
+            <li><a href="#about" class="mobile-nav-link">关于</a></li>
+        </ul>
+    </div>
+
+    <!-- 英雄区域 -->
+    <section class="hero" id="home">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="gradient-text">探索 · 学习 · 成长</span>
+            </h1>
+            <p class="hero-subtitle">记录每一次学习的足迹，分享技术探索的心得</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="42">0</span>
+                    <span class="stat-label">篇文章</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="8">0</span>
+                    <span class="stat-label">个分类</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="365">0</span>
+                    <span class="stat-label">天坚持</span>
+                </div>
+            </div>
+            <a href="#articles" class="cta-button">
+                <span>开始阅读</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分类区域 -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-th-large"></i>
+                学习分类
+            </h2>
+            <p class="section-subtitle">按领域探索我的学习笔记</p>
+            <div class="category-grid">
+                <div class="category-card" data-category="frontend">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>前端开发</h3>
+                    <p>HTML, CSS, JavaScript, React, Vue</p>
+                    <span class="category-count">12 篇文章</span>
+                </div>
+                <div class="category-card" data-category="backend">
+                    <div class="category-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>后端开发</h3>
+                    <p>Node.js, Python, Java, 数据库</p>
+                    <span class="category-count">8 篇文章</span>
+                </div>
+                <div class="category-card" data-category="algorithm">
+                    <div class="category-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>算法与数据结构</h3>
+                    <p>LeetCode, 算法思想, 数据结构</p>
+                    <span class="category-count">15 篇文章</span>
+                </div>
+                <div class="category-card" data-category="devops">
+                    <div class="category-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>DevOps</h3>
+                    <p>Git, Docker, CI/CD, Linux</p>
+                    <span class="category-count">5 篇文章</span>
+                </div>
+                <div class="category-card" data-category="ai">
+                    <div class="category-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>人工智能</h3>
+                    <p>机器学习, 深度学习, NLP</p>
+                    <span class="category-count">6 篇文章</span>
+                </div>
+                <div class="category-card" data-category="tools">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>工具与效率</h3>
+                    <p>开发工具, 效率提升, 资源推荐</p>
+                    <span class="category-count">4 篇文章</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 文章列表 -->
+    <section class="articles" id="articles">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-feather-alt"></i>
+                最新文章
+            </h2>
+            <p class="section-subtitle">我的学习笔记与技术探索</p>
+            
+            <!-- 筛选按钮 -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="frontend">前端</button>
+                <button class="filter-btn" data-filter="backend">后端</button>
+                <button class="filter-btn" data-filter="algorithm">算法</button>
+                <button class="filter-btn" data-filter="ai">AI</button>
+            </div>
+
+            <div class="article-grid">
+                <!-- 文章卡片 1 -->
+                <article class="article-card" data-category="frontend">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop');">
+                        <span class="article-tag">前端开发</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2024-01-15</span>
+                            <span><i class="far fa-clock"></i> 5 分钟</span>
+                        </div>
+                        <h3>React Hooks 深度解析</h3>
+                        <p>深入理解 useState、useEffect 等常用 Hooks 的工作原理和最佳实践...</p>
+                        <a href="posts/react-hooks.html" class="read-more">
+                            阅读更多 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 文章卡片 2 -->
+                <article class="article-card" data-category="backend">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc32?w=400&h=250&fit=crop');">
+                        <span class="article-tag">后端开发</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2024-01-10</span>
+                            <span><i class="far fa-clock"></i> 8 分钟</span>
+                        </div>
+                        <h3>Node.js 性能优化实战</h3>
+                        <p>从内存管理到事件循环，全方位提升 Node.js 应用性能...</p>
+                        <a href="posts/nodejs-performance.html" class="read-more">
+                            阅读更多 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 文章卡片 3 -->
+                <article class="article-card" data-category="algorithm">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1509228468518-180dd4864904?w=400&h=250&fit=crop');">
+                        <span class="article-tag">算法</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2024-01-08</span>
+                            <span><i class="far fa-clock"></i> 6 分钟</span>
+                        </div>
+                        <h3>动态规划入门到精通</h3>
+                        <p>从斐波那契数列到背包问题，系统掌握动态规划的核心思想...</p>
+                        <a href="posts/dynamic-programming.html" class="read-more">
+                            阅读更多 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 文章卡片 4 -->
+                <article class="article-card" data-category="ai">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop');">
+                        <span class="article-tag">AI</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2024-01-05</span>
+                            <span><i class="far fa-clock"></i> 10 分钟</span>
+                        </div>
+                        <h3>大语言模型原理浅析</h3>
+                        <p>从 Transformer 架构到 GPT 系列，了解大语言模型背后的技术原理...</p>
+                        <a href="posts/llm-introduction.html" class="read-more">
+                            阅读更多 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 文章卡片 5 -->
+                <article class="article-card" data-category="frontend">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=250&fit=crop');">
+                        <span class="article-tag">前端开发</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2024-01-02</span>
+                            <span><i class="far fa-clock"></i> 4 分钟</span>
+                        </div>
+                        <h3>CSS Grid 布局完全指南</h3>
+                        <p>掌握 CSS Grid 的核心概念，轻松构建复杂的响应式布局...</p>
+                        <a href="posts/css-grid.html" class="read-more">
+                            阅读更多 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 文章卡片 6 -->
+                <article class="article-card" data-category="backend">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=400&h=250&fit=crop');">
+                        <span class="article-tag">数据库</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2023-12-28</span>
+                            <span><i class="far fa-clock"></i> 7 分钟</span>
+                        </div>
+                        <h3>Redis 缓存策略详解</h3>
+                        <p>深入理解 Redis 的数据结构与应用场景，掌握缓存设计模式...</p>
+                        <a href="posts/redis-cache.html" class="read-more">
+                            阅读更多 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="load-more">
+                <button class="load-more-btn">
+                    <i class="fas fa-sync-alt"></i>
+                    加载更多
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-user-astronaut"></i>
+                关于我
+            </h2>
+            <div class="about-content">
+                <div class="about-avatar">
+                    <div class="avatar-wrapper">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-info">
+                    <h3>你好，我是一名热爱学习的开发者 👋</h3>
+                    <p>
+                        这是我的个人学习博客，用来记录编程学习过程中的笔记和心得。
+                        我相信「学而不思则罔，思而不学则殆」，通过写作来加深对知识的理解，
+                        同时也希望能帮助到同样在学习的你。
+                    </p>
+                    <div class="about-skills">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">算法</span>
+                        <span class="skill-tag">机器学习</span>
+                    </div>
+                    <div class="about-social">
+                        <a href="https://github.com/" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:your@email.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2024 Learning Hub. 用 ❤️ 和代码构建</p>
+                <p>Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

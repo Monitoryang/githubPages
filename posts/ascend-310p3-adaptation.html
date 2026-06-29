@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .pit-card {
-            background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(139,92,246,0.05));
+            background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(139,92,246,0.08));
             border-left: 4px solid #6366f1;
             border-radius: 8px;
             padding: 1.2rem 1.5rem;
@@ -33,16 +33,17 @@
         .code-block .str { color: #a6e3a1; }
         .code-block .cmt { color: #6c7086; font-style: italic; }
         .arch-diagram {
-            background: #f8f9fa;
-            border: 1px solid #e2e8f0;
+            background: rgba(15,23,42,0.8);
+            border: 1px solid rgba(99,102,241,0.2);
             border-radius: 8px;
             padding: 1.5rem;
             margin: 1.5rem 0;
-            font-family: monospace;
+            font-family: 'Fira Code', monospace;
             font-size: 0.85rem;
             line-height: 1.8;
             white-space: pre;
             overflow-x: auto;
+            color: #e2e8f0;
         }
         .tag-inline {
             display: inline-block;
@@ -52,12 +53,14 @@
             font-weight: 600;
             margin-right: 4px;
         }
-        .tag-critical { background: #fee2e2; color: #dc2626; }
-        .tag-medium { background: #fef3c7; color: #d97706; }
-        .tag-low { background: #dbeafe; color: #2563eb; }
-        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-        th, td { padding: 0.6rem 0.8rem; border: 1px solid #e2e8f0; text-align: left; }
-        th { background: #f1f5f9; font-weight: 600; }
+        .tag-critical { background: rgba(220,38,38,0.2); color: #fca5a5; }
+        .tag-medium { background: rgba(217,119,6,0.2); color: #fcd34d; }
+        .tag-low { background: rgba(37,99,235,0.2); color: #93c5fd; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem 1rem; border: 1px solid rgba(99,102,241,0.15); text-align: left; color: #e2e8f0; }
+        th { background: rgba(99,102,241,0.15); font-weight: 600; color: #f8fafc; }
+        tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+        tr:hover { background: rgba(99,102,241,0.08); }
     </style>
 </head>
 <body>

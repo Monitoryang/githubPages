@@ -1,11 +1,12 @@
 /* ============================================
    文章页面样式
+   UI/UX Pro Max: Magazine/Blog 配色 + Space Grotesk 标题
 ============================================ */
 
 /* 文章头部 */
 .post-header {
     padding: 140px 0 60px;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: var(--gradient-hero, linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%));
     position: relative;
     overflow: hidden;
 }
@@ -18,8 +19,8 @@
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 30% 50%, rgba(102,126,234,0.2) 0%, transparent 50%),
-        radial-gradient(circle at 70% 80%, rgba(240,147,251,0.15) 0%, transparent 40%);
+        radial-gradient(circle at 30% 50%, rgba(99,102,241,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(236,72,153,0.1) 0%, transparent 40%);
 }
 
 .post-header .container {
@@ -69,7 +70,7 @@
 
 .post-meta i {
     margin-right: 8px;
-    color: #667eea;
+    color: var(--accent, #ec4899);
 }
 
 /* 文章内容 */
@@ -109,12 +110,12 @@
 }
 
 .post-body code {
-    background: rgba(102,126,234,0.15);
+    background: rgba(99,102,241,0.15);
     padding: 3px 8px;
     border-radius: 4px;
-    font-family: 'Fira Code', 'Consolas', monospace;
+    font-family: var(--font-code, 'Fira Code', 'Consolas', monospace);
     font-size: 0.9em;
-    color: #f093fb;
+    color: #c084fc;
 }
 
 .post-body pre {
@@ -135,8 +136,8 @@
 }
 
 .post-body blockquote {
-    border-left: 4px solid #667eea;
-    background: rgba(102,126,234,0.1);
+    border-left: 4px solid var(--accent, #ec4899);
+    background: rgba(236,72,153,0.08);
     padding: 20px 25px;
     margin: 30px 0;
     border-radius: 0 var(--radius-md) var(--radius-md) 0;
@@ -226,14 +227,14 @@
 .nav-prev:hover,
 .nav-next:hover {
     background: rgba(255,255,255,0.08);
-    border-color: rgba(102,126,234,0.3);
+    border-color: rgba(99,102,241,0.3);
     transform: translateY(-3px);
 }
 
 .nav-prev i,
 .nav-next i {
     font-size: 1.2rem;
-    color: #667eea;
+    color: var(--accent, #ec4899);
 }
 
 .nav-label {
